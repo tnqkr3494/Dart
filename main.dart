@@ -1,9 +1,37 @@
-typedef ListOfInts = List;
-//자료형에 사용자가 원하는 alias를 붙일 수 있게 해준다. (자료형 이름의 별명을 만들 때 사용)
+class Player {
+  String name;
+  int xp;
+  int age;
+  String team;
 
-ListOfInts reverseListOfNumbers(ListOfInts list) {
-  var reversedList = list.reversed.toList();
-  return reversedList;
+  Player(
+      {required this.name,
+      required this.xp,
+      required this.age,
+      required this.team}); // 중괄호를 넣어줌.
+
+  void sayHello() {
+    print("Hi my name is $name");
+  }
 }
 
-void main() {}
+void main() {
+  var player1 = Player(
+    // 이해하기 쉽도록 parameter이 어떤 뜻인지를 함께 작성할 수 있음.
+    name: "nico",
+    xp: 1500,
+    age: 19,
+    team: "blue",
+  );
+
+  player1.sayHello();
+
+  var player2 = Player(
+    name: "cano",
+    xp: 2500,
+    age: 25,
+    team: "blue",
+  );
+
+  player2.sayHello();
+}
