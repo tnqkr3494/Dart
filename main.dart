@@ -10,6 +10,14 @@ class Player {
       required this.age,
       required this.team}); // 중괄호를 넣어줌.
 
+  Player.createBluePlayer({
+    required String name,
+    required int age,
+  })  : this.age = age,
+        this.name = name,
+        this.team = 'blue',
+        this.xp = 0;
+
   void sayHello() {
     print("Hi my name is $name");
   }
@@ -26,12 +34,7 @@ void main() {
 
   player1.sayHello();
 
-  var player2 = Player(
-    name: "cano",
-    xp: 2500,
-    age: 25,
-    team: "blue",
-  );
+  var player2 = Player.createBluePlayer(name: "kang", age: 19);
 
   player2.sayHello();
 }
