@@ -1,13 +1,9 @@
-String capitalizeName(String? name) {
-  return name?.toUpperCase() ?? "";
-}
-//?? 연산자를 이용하면 왼쪽 값이 null인지 체크해서 null이 아니면 왼쪽 값을 리턴하고 null이면 오른쪽 값을 리턴한다.
+typedef ListOfInts = List;
+//자료형에 사용자가 원하는 alias를 붙일 수 있게 해준다. (자료형 이름의 별명을 만들 때 사용)
 
-void main() {
-  String? name;
-  name ??= "sugar";
-  name = null;
-  name ??= "js";
-  print(name); // js
+ListOfInts reverseListOfNumbers(ListOfInts list) {
+  var reversedList = list.reversed.toList();
+  return reversedList;
 }
-//??= 연산자를 이용하면 변수 안에 값이 null일 때를 체크해서 값을 할당해줄 수 있다.
+
+void main() {}
