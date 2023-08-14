@@ -1,16 +1,9 @@
 void main() {
-  var name = "nico";
-  var age = 10;
-  var greeting =
-      "Hello everyone, my name is $name and I'm ${age + 2} years old";
-  print(greeting);
+  var player = {
+    "name": "nico",
+    "xp": 19.99,
+    "superpower": false,
+  };
 
-  var oldFriends = ["nico", "lyn"];
-  var newFriends = [
-    "lewis",
-    "ralf",
-    "daren",
-    for (var friend in oldFriends) "😍$friend"
-  ];
-  print(newFriends);
+  var numbers = {1, 2, 3, 4};
 }
