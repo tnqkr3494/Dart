@@ -1,10 +1,16 @@
 void main() {
-  var giveMeFive = true;
-  List<int> numbers = [
-    1,
-    2,
-    3,
-    4,
-    if (giveMeFive) 5,
-  ]; //이렇게 사용해도 되지만 왠만한 상황에서는 그냥 var를 사용하자!, 마지막에 쉼표사용으로 보기 편하게 한줄씩 정리됨.
+  var name = "nico";
+  var age = 10;
+  var greeting =
+      "Hello everyone, my name is $name and I'm ${age + 2} years old";
+  print(greeting);
+
+  var oldFriends = ["nico", "lyn"];
+  var newFriends = [
+    "lewis",
+    "ralf",
+    "daren",
+    for (var friend in oldFriends) "😍$friend"
+  ];
+  print(newFriends);
 }
