@@ -1,9 +1,7 @@
-void main() {
-  var player = {
-    "name": "nico",
-    "xp": 19.99,
-    "superpower": false,
-  };
+String sayHello(
+        {required String name, required int age, required String country}) =>
+    "Hello my name is $name, age: $age, country: $country";
 
-  var numbers = {1, 2, 3, 4};
+void main() {
+  print(sayHello(age: 12, country: "cuba", name: "nico"));
 }
